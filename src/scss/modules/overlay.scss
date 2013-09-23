@@ -19,6 +19,7 @@
 
     li {
         margin-bottom: 20px;
+        margin-left: 40px;
         cursor       : pointer;
 
         span {
@@ -33,6 +34,7 @@
             display       : inline-block;
             vertical-align: middle;
             margin-right  : 10px;
+            margin-left   : -40px;
             background    : #fbfbfb;
             color         : #eeeeee;
             font-size     : 20px;
@@ -72,7 +74,7 @@
 
     ul {
         list-style: none;
-        margin    : 0;
+        margin    : 0 10%;
         padding   : 0;
     }
 
@@ -107,9 +109,5 @@
             right          : 20px;
             text-decoration: none;
         }
-    }
-
-    .found-suitable {
-        margin: 180px 0 340px;
     }
 }

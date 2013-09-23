@@ -35,9 +35,10 @@
      * Overlay
      */
     window.OverlayView = Backbone.View.extend({
-        el        : "#checkOverlay",
-        numChecked: 0,
-        template  : _.template($('#checkOverlay-template').length > 0 ? $('#checkOverlay-template').html() : ''),
+        el         : "#checkOverlay",
+        numChecked : 0,
+        template   : _.template($('#checkOverlay-template').html()),
+        tplSuitable: _.template($('#found-suitable-template').html()),
 
         render: function() {
             $(this.el).html(this.template()).show();
@@ -68,8 +69,10 @@
             this.numChecked += $(e.target).hasClass("is-checked") ? 1 : -1;
 
             if (this.numChecked === $(this.el).find(".checklist-container li").length) {
-                $(".found-suitable").removeClass("hidden");
-                $(".checklist-container").scrollTop(1000);
+                //$(".found-suitable").removeClass("hidden");
+                //$(".checklist-container").scrollTop(1000);
+                $(this.el).find(".checklist-container h2, .checklist-container ul").remove();
+                $(this.el).find(".checklist-container").append(this.tplSuitable());
             } else {
                 if (! $(".found-suitable").hasClass("hidden")) {
                     $(".found-suitable").addClass("hidden");
@@ -79,6 +82,7 @@
 
         hideOverlay: function() {
             $(this.el).hide();
+            this.numChecked = 0;
             return this;
         }
     });
@@ -98,7 +102,7 @@
             var newDoCheck = new DoCheckView({overlay: newCheckOverlay});
             newDoCheck.render();
 
-            $('body').keyup(function(e) {
+            $("body").on("keyup", function(e) {
                 if (e.which == 27){
                     newDoCheck.hideOverlay();
                 }

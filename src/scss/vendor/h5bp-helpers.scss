@@ -53,7 +53,14 @@
 
     .no-js & {
         display: block;
-        visibility: show;
+        visibility: visible;
+    }
+}
+
+.no-js-hidden {
+    .no-js & {
+        display: none;
+        visibility: hidden;
     }
 }
 
