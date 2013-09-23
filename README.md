@@ -1,4 +1,4 @@
 informaat
 =========
 
-Informaat job applicatin demo page
+Informaat job application demo page
