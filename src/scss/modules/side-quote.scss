@@ -14,7 +14,6 @@
         .generatedcontent & {
             &:before,
             &:after {
-                font      : $blockFont;
                 font-style: italic;
                 position  : absolute;
                 content   : '"';

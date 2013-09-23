@@ -19,8 +19,11 @@
 
     li {
         margin-bottom: 20px;
-        padding-left : 25px;
         cursor       : pointer;
+
+        span {
+            padding-left : 25px;
+        }
 
         &:before {
             content       : "\f00c";
@@ -69,8 +72,8 @@
 
     ul {
         list-style: none;
-        margin: 0;
-        padding: 0;
+        margin    : 0;
+        padding   : 0;
     }
 
     .rgba & {
@@ -78,9 +81,14 @@
     }
 
     .checklist-container {
-        padding: 2.5% 5%;
-
+        padding   : 2.5% 5%;
         background: url('/img/transpBlack75.png');
+        position  : relative;
+        height    : 70%;
+        max-height: 70%;
+        overflow-y:scroll;
+
+        @include box-sizing(border-box);
 
         .rgba & {
             background: rgba(0,0,0,0.75);
@@ -92,5 +100,16 @@
         .borderradius & {
             @include border-radius(10px);
         }
+
+        .close {
+            position       : fixed;
+            top            : 20px;
+            right          : 20px;
+            text-decoration: none;
+        }
+    }
+
+    .found-suitable {
+        margin: 180px 0 340px;
     }
 }

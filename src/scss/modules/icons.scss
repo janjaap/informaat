@@ -1,0 +1,51 @@
+.icon {
+    background: transparent;
+    width       :32px;
+    font-size   :14px;
+    display     :inline-block;
+    text-align  :right;
+    margin-right:10px;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    display               : inline;
+    width                 : auto;
+    height                : auto;
+    line-height           : normal;
+    vertical-align        : baseline;
+    background-image      : none;
+    background-position   : 0% 0%;
+    background-repeat     : repeat;
+    margin-top            : 0;
+    font-family           : FontAwesome;
+    font-weight           : normal;
+    font-style            : normal;
+    text-decoration       : inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right         : .3em;
+
+    a & {
+        display: inline;
+    }
+
+    &:before {
+        text-decoration: inherit;
+        display: inline-block;
+        speak: none;
+    }
+}
+
+.icon-white {
+    color: #ffffff;
+}
+.icon-border {
+    border: solid 1px #eeeeee;
+    padding: .2em .25em .15em;
+
+    @include border-radius(3px);
+}
+
+.icon-remove:before {
+   content: "\f00d";
+}
