@@ -1,0 +1,43 @@
+/**
+ * Common rules that span the site's modules
+ */
+
+/**
+ * Global font and color settings
+ */
+body {
+    font : 16px/1.6em Helvetica, Helvetica Neue, Arial, sans-serif;
+    color: $textColor;
+}
+
+@for $headingNr from 1 through 6 {
+    h#{$headingNr} {
+        color: $headingColor;
+
+        .fontface & {
+            font-family: Noto Sans;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}
+
+.fontface nav li {
+    font-family: Noto Sans;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src        : url('/font/fontawesome-webfont.eot?v=3.2.1');
+    src        : url('/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+    font-weight: normal;
+    font-style : normal;
+}

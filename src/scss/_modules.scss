@@ -1,0 +1,14 @@
+.module {
+    padding: 10px 7.5%;
+    margin : 0 0 20px;
+
+    &.has-emphasis {
+        color     : #ffffff;
+        background: $themeColorPrimary;
+        border-top: 20px solid $themeColorPrimaryDark;
+
+        @include single-box-shadow($color:#aaaaaa, $hoff:0px, $voff:5px, $blur:10px, $spread:0);
+    }
+}
+
+@import "modules/*";

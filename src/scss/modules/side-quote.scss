@@ -1,0 +1,41 @@
+.module.side-quote {
+    $blockFont: 400 26px/1.6em tahoma, serif;
+
+    blockquote {
+        margin  : 1em 0;
+        font    : $blockFont;
+        position: relative;
+        display: inline;
+
+        .fontface & {
+            font-family: Shadows Into Light;
+        }
+
+        .generatedcontent & {
+            &:before,
+            &:after {
+                font      : $blockFont;
+                font-style: italic;
+                position  : absolute;
+                content   : '"';
+                font-size : 28px;
+            }
+
+            &:before {
+                top : 0;
+                left: -20px;
+            }
+
+            &:after {
+                right: -10px;
+            }
+        }
+
+        .font-face.generatedcontent {
+            &:before,
+            &:after {
+                font-family: Shadows Into Light;
+            }
+        }
+    }
+}

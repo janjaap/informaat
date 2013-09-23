@@ -1,0 +1,104 @@
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float        : left;
+        width        : 27%;
+        margin       : 0;
+        padding      : 25px 2.5%;
+        margin-bottom: 0;
+        height       : 75px;
+        display      : block;
+
+        &:hover {
+            background: $themeColorPrimaryDark;
+            text-decoration: none;
+        }
+    }
+
+    nav li:first-child a {
+        margin-left: -1px;
+    }
+
+    nav li:last-child a {
+        border-right: 1px solid $themeColorPrimaryDark;
+        margin-right: -1px;
+    }
+
+    nav ul li {
+        display: inline;
+        min-height: 70px;
+    }
+
+    nav li.is-active a {
+        background    : $themeColorEmphasis;
+        margin-bottom : -20px;
+        padding-bottom: 45px;
+        cursor        : default;
+        pointer-events: none;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 38%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}

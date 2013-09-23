@@ -1,0 +1,96 @@
+.overlay {
+    position: fixed;
+    top     : 0;
+    bottom  : 0;
+    left    : 0;
+    height  : 100%;
+    width   : 80%;
+    padding: 10%;
+    background: url('/img/transpBlack75.png');
+
+    .section-header {
+        font-size: 32px;
+    }
+
+    .section-header,
+    li {
+        color: #ffffff;
+    }
+
+    li {
+        margin-bottom: 20px;
+        padding-left : 25px;
+        cursor       : pointer;
+
+        &:before {
+            content       : "\f00c";
+            padding       : 5px;
+            width         : 30px;
+            height        : 30px;
+            display       : inline-block;
+            vertical-align: middle;
+            margin-right  : 10px;
+            background    : #fbfbfb;
+            color         : #eeeeee;
+            font-size     : 20px;
+            line-height   : 22px;
+
+            .fontface & {
+                font-family: FontAwesome, sans-serif;
+            }
+
+            .textshadow & {
+                @include text-shadow(0 1px 0 #dddddd, 0 2px 0 #ffffff, 0 -1px 0 #dddddd);
+            }
+
+            .cssgradients & {
+                @include background-image(linear-gradient(#fbfbfb, #ededed));
+            }
+
+            .borderradius & {
+                @include border-radius;
+            }
+
+            @include box-sizing(border-box);
+        }
+
+        &:hover {
+            &:before {
+                @include box-shadow(0 0 3px 1px #ffce73);
+            }
+        }
+
+        &.is-checked {
+            &:before {
+                color: rgb(20, 175, 50);
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .rgba & {
+        background: rgba(0,0,0,0.75);
+    }
+
+    .checklist-container {
+        padding: 2.5% 5%;
+
+        background: url('/img/transpBlack75.png');
+
+        .rgba & {
+            background: rgba(0,0,0,0.75);
+        }
+
+        .boxshadow.rgba & {
+            @include box-shadow(rgba(#000, 0.25) -1px -1px, rgba(#000, 0.25) 1px 1px, rgba(#000, 0.4) 0 0 1px 2px);
+        }
+        .borderradius & {
+            @include border-radius(10px);
+        }
+    }
+}
