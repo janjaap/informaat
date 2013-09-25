@@ -21,7 +21,7 @@ Before you start, you need to have the following installed. These are not depend
 
 Clone the repository on your local machine.
 
-    git clone --recursive git@github.com:WEBclusive/informaat.git informaat
+    git clone --recursive git@github.com:janjaapc/informaat.git informaat
 
 ### Initialize the vagrant instance
 
